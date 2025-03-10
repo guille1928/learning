@@ -77,29 +77,22 @@ public class Operations {
 		
 		for (int i =2 ; i<numPrime; i++){
 			
+			if(numPrime%i ==0 ) {
+				isPrime= false;
+				break;
+				}
+			}
+		 
 			
-			
-		}
+		if(isPrime) {System.out.println("The number is prime");
+			}else {System.out.println("Is not prime");
 		
-		if(numPrime / numPrime ==0 && numPrime/1 ==1) {
-			
-			System.out.println("The number is prime");
-		}else {System.out.println("Is not prime");}
-		
-		
-		
-		
-		
+
 		}	
 		
-	
-	
-		
-		
-		
+	}
 	
 		
-	
-	
-
+		
+		
 }
