@@ -64,7 +64,37 @@ public class Operations {
 		
 		System.out.println("The factorial of : " + num5 + " is :" + factorial);
 		
+		
+		
+		//prime number
+
+		System.out.println("----------------------------------");
+		System.out.println("Introduce another number to see if is a prime");
+		
+		int numPrime = scanner.nextInt();
+		
+		boolean isPrime= numPrime >1;
+		
+		for (int i =2 ; i<numPrime; i++){
+			
+			
+			
+		}
+		
+		if(numPrime / numPrime ==0 && numPrime/1 ==1) {
+			
+			System.out.println("The number is prime");
+		}else {System.out.println("Is not prime");}
+		
+		
+		
+		
+		
 		}	
+		
+	
+	
+		
 		
 		
 	
