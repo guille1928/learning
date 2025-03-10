@@ -52,6 +52,18 @@ public class ArraysTests {
 		double average= value/grades.length;
 		System.out.println("The average grade for the students is :  " + average);
 		
+		
+		System.out.println("----------------------------------");
+		System.out.println("write a sentence");
+		String sentence = scanner.nextLine();
+		String [] arraySentence = {sentence};
+		
+		for (int i =arraySentence -1 ; i>=0; i++) {
+			
+			System.out.println(arraySentence[i]);
+		}
+		
+		
 	}
 	
 }
