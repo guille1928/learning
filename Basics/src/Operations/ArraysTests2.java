@@ -12,25 +12,20 @@ public class ArraysTests2 {
 		Scanner scanner = new Scanner (System.in);
 		System.out.println("Please , introduce one sentence ");
 		String sentenceUser = scanner.nextLine();
-		
-		String [] arrayString = {sentenceUser};
-			
-		//just trying to read the array
-		System.out.println("normal");
-		for (int i = 0; i<arrayString.length; i++) {
-			
-			System.out.println(arrayString[i]);
+		//create an Array of strings
+		String [] arrayString = sentenceUser.split(" ");
+		//use StringBuilder to use append and reverse
+		StringBuilder str = new StringBuilder();
+		str.append(sentenceUser);
+		StringBuilder reverse = str.reverse();
+		System.out.println("New try with StringBuilder");
+		System.out.println(reverse);
+		//read the array in reserve mode
+		System.out.println("-----------------------------------");
+		System.out.println("New try with an Array of strings");
+		for (int i = arrayString.length -1; i>=0 ;i--) {
+			System.out.print(arrayString[i] + " ");
 		}
-		
-		int num = arrayString.length;
-		
-		
-		System.out.println("new try");
-		for (int i = num ; i<0 ; i++) {
-			System.out.println(arrayString[i]);
-			
-		}
-		
 		
 		
 		
