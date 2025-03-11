@@ -100,6 +100,37 @@ public class Operations {
 		int suma = decena + centena ;
 		System.out.println("decena "+decena + "centena " +centena);
 		System.out.println("The sum of both digits of "+ numbConsole + " is : " + suma);
+		
+		System.out.println("----------------------------------");
+		//for any tipe of number
+		System.out.println("Now introduce any kind of number ");
+		int numbConsole2 = scanner.nextInt();
+		int suma2 = 0;
+		
+		while (numbConsole2 >0) {
+			suma2 += numbConsole2%10;
+			numbConsole2 /= 10;
+			
+		}
+		System.out.println("The sum of its digits is " +suma2);
+		
+		
+		//Lets write the Fibonacci series 
+		System.out.println("----------------------------------");
+		//for any tipe of number
+		System.out.println("Now introduce any kind of number to see the Fibonacci series");
+		int fibo = scanner.nextInt();
+		int a = 0, b= 1;
+		
+		for (int i = 0 ; i<fibo ; i++) {
+			System.out.println(a +" ");
+			int temp = a+b;
+			a=b;
+			b= temp;
+			
 		}
 		
+		
+		
+	}
 }
