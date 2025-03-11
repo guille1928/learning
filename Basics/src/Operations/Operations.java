@@ -81,18 +81,25 @@ public class Operations {
 				isPrime= false;
 				break;
 				}
-			}
-		 
-			
+			}	
 		if(isPrime) {System.out.println("The number is prime");
 			}else {System.out.println("Is not prime");
-		
 
-		}	
+			}	
 		
-	}
+		
 	
+		//lets try to sum the digits from a number
+		System.out.println("----------------------------------");
+		System.out.println("Plese introduce a number with 2 digits");
+		int numbConsole = scanner.nextInt();
 		
-		
+		int decena = numbConsole/10;
+		int centena = numbConsole%10;
+	
+		int suma = decena + centena ;
+		System.out.println("decena "+decena + "centena " +centena);
+		System.out.println("The sum of both digits of "+ numbConsole + " is : " + suma);
+		}
 		
 }
