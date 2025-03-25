@@ -1,4 +1,4 @@
-package Salute;
+package salute;
 
 import java.util.Scanner;
 

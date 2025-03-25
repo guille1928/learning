@@ -1,4 +1,4 @@
-package Clases;
+package clases;
 
 public class Worker {
 	//we will work with a class , its atributes and getters and setters
