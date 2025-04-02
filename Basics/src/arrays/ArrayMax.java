@@ -37,5 +37,20 @@ System.out.println("The numbers are  : ");
 int biggestNumber = Arrays.stream(basic).max().getAsInt();
 	System.out.println("The biggest number of the array is : " + biggestNumber);
 	
+	int [][] arrayBi = new int[3][10];
+
+	
+	
+	
+	
+	
+	
+	
+	
 }
+
+
+
+
+
 }
