@@ -1,5 +1,6 @@
 package basic;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class test5 {
@@ -13,20 +14,30 @@ public class test5 {
 	public static void main(String[] args) {
 		//pedimos 5 numeros al user
 		Scanner scn = new Scanner(System.in);
-		int n= 0;
-		int [] arrayNum;
+		
+		int [] arrayNum= new int [5];
+		int n= arrayNum[0];
 		do {
-		n= n+1;
 		System.out.println("Introduce un número  ");
 		int num= scn.nextInt();
-		arrayNum = {num};
+		arrayNum[n] = num;
+		n++;
 		}
-		while (n<5);
+		while (n<arrayNum.length);
+		//mecanismo 1 utilizando Arrays.Stream
+		double media= Arrays.stream(arrayNum).average().getAsDouble();
+		System.out.println("El promedio de los numeros del array es " + media);
 		
-		int media= arrayNum.
+		System.out.println("");
+		//mecanismo realizando un for
+		double suma= 0;
+		for (int i=0; i<arrayNum.length;i++) {
+			int n1 = arrayNum[i];
+			suma+=n1;
+			
+		}
 		
-		
-		System.out.println("El promedio de los numeros del array es " );
+		System.out.println("La otra media sería : "+ (suma/arrayNum.length));
 	}
 	
 	
