@@ -5,10 +5,6 @@ import java.util.Scanner;
 public class MainMenu {
 
 	//pediremos al usuario que elige de un menu interactivo en la consola
-	
-	
-	
-	
 	public static void main(String[] args) {		
 		Scanner scn = new Scanner(System.in);
 		int i = 0;
@@ -19,8 +15,8 @@ public class MainMenu {
 				+ "1. Agregar alumno \n"
 				+ "2. Mostrar todos los alumnos \n" 
 				+ "3. Calcular nota media \n" 
-				+ "4. Mostrar nota mas baja \n"
-				+ "5. Mostrar nota mas alta \n"
+				+ "4. Mostrar nota mas alta \n"
+				+ "5. Mostrar nota mas baja \n"
 				+ "6. Salir \n"
 				+ "Elige una opción: ");
 			
@@ -40,11 +36,26 @@ public class MainMenu {
 			case 2: {
 				System.out.println("La lista de alumnos es : ");
 				System.out.println("");
-				op.mostrarAlumnos();
+				System.out.println(op.mostrarAlumnos()); 
 				System.out.println("");
 				break;
 			}
-			
+			case 3: {
+				System.out.println("La nota media de los alumnos es : ");
+			    System.out.println(op.notaMedia()); 
+			    break;
+			}
+			case 4 : {
+				System.out.println("La nota mas alta de los alumnos es : " + op.notaAlta());
+			    System.out.println("");
+			    break;
+				
+			}
+			case 5 : {
+				System.out.println("La nota mas baja de los alumnos es : " + op.notaBaja());
+			    System.out.println("");
+			    break;
+			}
 			
 			case 6: {System.out.println("Saliendo");
 				

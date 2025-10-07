@@ -3,27 +3,81 @@ package gestionAlumnosMenu;
 import java.util.ArrayList;
 
 public class Operaciones {
-	String nombre;
-	double nota;
-	boolean exito = false;
-	private ArrayList<Alumno> lista = new ArrayList<Alumno>();
+	//creamos el arraylist para operaciones con los alumnos que creemos
+	private ArrayList<Alumno> alumArray = new ArrayList<Alumno>();
+	//creamos la funcion para introducir alumnos
+	public void insertAlumno (String nombre, double nota) {
+		Alumno alumno = new Alumno(nombre, nota);
+		alumArray.add(alumno);	
+	}
 	
+	//mostrar todos los alumnos
+	public String mostrarAlumnos () {
+		if(alumArray.isEmpty()) {
+			return "No hay alumnos registrados";
+			}
+		StringBuilder sb = new StringBuilder();
+		for (Alumno n : alumArray) {
+			sb.append("El alumno/a : ")
+			.append(n.getNombre() ) 
+			.append(" tiene una nota de : ")
+			.append(n.getNota())
+			.append("\n");
+			}
+		return sb.toString();
+		
+	}
 	
-	public void insertAlumno (String nombre1, double nota1) {
-		Alumno alumno = new Alumno(nombre1 , nota1);
-		lista.add(alumno);
+	//calculamos las notas en un array con stream 
+	
+	public String notaMedia () {
+		if(alumArray.isEmpty()) {
+		return "No hay alumnos registrados"; 
+
+		}	
+		double media= 0;
+		for(Alumno n : alumArray) {
+			double nota = n.getNota();
+			media +=nota;
 		}
-	
-	public void mostrarAlumnos () {
-	
-	for (int i=0; i<lista.size();i++) {
-		String nombre= lista.get(i).getNombre().toString();
-		Double nota = lista.get(i).getNota();
-		System.out.println("El usuario/a : "+nombre +" tiene una nota de : " +nota );
-	}
+		String mediaString = String.valueOf(media/alumArray.size());
+		return mediaString;
+		
 	}
 	
+	//calculo de la nota mas alta
+	public String notaAlta () {
+		double max= Double.MIN_VALUE;
+		String alumno = "";
+		if(alumArray.isEmpty()) {
+			return "No hay alumnos registrados";
+			}	
+		for (Alumno n : alumArray) {
+			if (n.getNota()>max) {
+				max  = n.getNota();
+				alumno= n.getNombre();
+			}
+			}
+		String nota = String.valueOf(max);
+	return alumno + " " +nota;	
+	}
 	
 	
-	
+	//nota mas baja
+	public String notaBaja () {
+		String alumno = "";
+		double min= Double.MAX_VALUE;
+		if(alumArray.isEmpty()) {
+			return "No hay alumnos registrados" ;
+			}	
+		for (Alumno n : alumArray) {	
+			if(n.getNota()<min) {
+				min=n.getNota();
+				alumno= n.getNombre();
+				}
+			}
+	String mini= String.valueOf(min);
+	return alumno + " " + mini;	
+	}
+
 }
