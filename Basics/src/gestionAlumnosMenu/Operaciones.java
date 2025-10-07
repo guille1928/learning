@@ -6,21 +6,24 @@ public class Operaciones {
 	String nombre;
 	double nota;
 	boolean exito = false;
-	Alumno alumno = new Alumno(nombre , nota);
+	private ArrayList<Alumno> lista = new ArrayList<Alumno>();
 	
-	public void insertAlumno (String nombre) {
-		alumno.setNombre(nombre);
+	
+	public void insertAlumno (String nombre1, double nota1) {
+		Alumno alumno = new Alumno(nombre1 , nota1);
+		lista.add(alumno);
 		}
 	
-	public String mostrarAlumnos () {
-	String lista="";
-	ArrayList<Alumno> listaAlumno = new ArrayList<>();
-	for (int i=0; i<listaAlumno.size();i++) {
-		lista= listaAlumno.get(i).getNombre();
-	}	
-	return lista;	
-		
+	public void mostrarAlumnos () {
+	
+	for (int i=0; i<lista.size();i++) {
+		String nombre= lista.get(i).getNombre().toString();
+		Double nota = lista.get(i).getNota();
+		System.out.println("El usuario/a : "+nombre +" tiene una nota de : " +nota );
 	}
+	}
+	
+	
 	
 	
 }
